@@ -13,8 +13,8 @@ namespace N53_HT1
         private IEnumerable<INotificationService> _notificationService;
 
 
-        private UserBonusService(OrderEventStore orderEventStore, UserService userService,
-            BonusEventStore bonusEventStore, BonusService bonusService, 
+        public UserBonusService(OrderEventStore orderEventStore, UserService userService,
+            BonusEventStore bonusEventStore, BonusService bonusService,
             IEnumerable<INotificationService> notificationServices)
         {
             _orderEventStore = orderEventStore;
@@ -23,7 +23,7 @@ namespace N53_HT1
             _notificationService = notificationServices;
             _notificationService = notificationServices;
 
-            orderEventStore.OnOrderCreated += HandleOrderCreatedEventAsync;     
+            orderEventStore.OnOrderCreated += HandleOrderCreatedEventAsync;
         }
 
         public async ValueTask HandleOrderCreatedEventAsync(Order order)
@@ -38,7 +38,7 @@ namespace N53_HT1
             await _bonusService.UpdateAsync(changedAmount);
 
 
-            if(bonusLength < createdNewBonus)
+            if (bonusLength < createdNewBonus)
             {
                 await _bonusEventStore.CreateBonusCreatedEventAsync(foundBonus);
                 return;
@@ -46,7 +46,7 @@ namespace N53_HT1
 
 
             var numString = "1";
-            for(var i = 0; i < bonusLength; i++)
+            for (var i = 0; i < bonusLength; i++)
             {
                 numString += "0";
             }
