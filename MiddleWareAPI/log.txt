@@ -1,0 +1,9 @@
+2023-10-24 16:02:13Z request path - /swagger with method GET
+2023-10-24 16:02:57Z request path - /swagger with method GET
+2023-10-24 16:03:26Z request path - /swagger with method GET
+2023-10-24 16:06:33Z request path - /swagger with method GET
+2023-10-24 16:06:40Z request path - / with method GET
+2023-10-24 16:06:40Z request path - /favicon.ico with method GET
+2023-10-24 16:17:15Z request path - /swagger with method GET
+2023-10-24 16:17:26Z request path - / with method GET
+2023-10-24 16:17:26Z request path - /favicon.ico with method GET
